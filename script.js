@@ -1,18 +1,56 @@
-const gradient = document.querySelectorAll('span .background-gradient');
+const loader = document.querySelector('.loading-screen');
+const gradient = document.querySelectorAll('.background-gradient');
 const loadingText1 = document.querySelector('.loading-text h1');
 const loadingText2 = document.querySelector('.loading-text p');
+const nav = document.querySelector('nav');
+const heroText = document.querySelectorAll('.hero-text h1');
+const heroBtns = document.querySelectorAll('.hero-btn');
+    const videos = document.querySelector('.video');
 
-gsap.from(loadingText1, 1, {
-    y: 100,
-    stagger: 1,
-    opacity: 0,
+
+    gsap.from(loadingText1, 1, {
+        y: '-20%',
+        opacity: 0,
+        ease: Power4.ease,
+    })
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.from(loadingText2, 1, {
+        y: '30%',
+        delay: 1,
+        ease: Power4.ease,
+        opacity: 0,
+    })
 })
 
-gsap.from(loadingText2, 1, {
-    y: 100,
-    delay: 1,
-    stagger: 1,
-    opacity: 0,
-})
+const delay = 1000;
+setTimeout(() => {
+    loader.addEventListener('click', () => {
+    gsap.to(loader, {
+        duration: .3,
+        opacity: 0,
+        display: "none",
+    })
+    
+    gsap.from(heroText, 1, {
+        duration: 1.5,
+        opacity: 0,
+        y: '10%',
+        stagger: 0.3
+    })
 
-console.log('hello world');
+    gsap.from(nav, {
+        duration: 1.5,
+        opacity: 0,
+        y: '-20%',
+        delay: 1.5
+    })
+    gsap.from(heroBtns, {
+        duration: 1.5,
+        opacity: 0,
+        y: '10%',
+        stagger: 0.2,
+        delay: 1.5
+    })
+})
+}, delay);
