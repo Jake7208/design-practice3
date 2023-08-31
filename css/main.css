@@ -31,10 +31,12 @@ body
 .loading-screen
 {
     height: 100vh;
-    max-width: 100vw;
-    margin: 0 auto;
+    min-width: 100vw ;
+    margin: 0 !important;
     background: var(--clr-loader);
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 
