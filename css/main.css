@@ -158,16 +158,37 @@ body
     height: clamp(40px, 5vw, 50px);
     border-radius: 5px;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     overflow: hidden;
 }
+.line
+{
+    width: 30%;
+    height: 2px;
+    background: var(--clr-text);
+}
 
+.hero-btn:hover .line
+{
+    background: var(--clr-bg);
+}
+.hero-btn svg
+{
+    fill: var(--clr-text);
+}
+.hero-btn:hover svg
+{
+    fill: var(--clr-primary);
+}
 .hero-btn:hover
 {
     cursor: pointer;
     color: var(--clr-bg);
 }
 
-.hero-btn::after
+.hero-btn::before
 {
     content: '';
     position: absolute;
@@ -180,7 +201,7 @@ body
     transition: height .3s;
 }
 
-.hero-btn:hover::after
+.hero-btn:hover::before
 {
     height: 100%;
 }
@@ -233,7 +254,10 @@ body
     {
         top: 65%;
     }
-    
+    .line
+    {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px)
