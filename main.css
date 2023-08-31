@@ -4,6 +4,7 @@
 {
     --clr-loader: #ffffff;
     --clr-bg: #ffffff;
+    --clr-text: #010101;
 }
 
 *
@@ -18,6 +19,7 @@ body
     max-width: 100%;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
+    color: var(--clr-text);
 }
 
 .loading-screen
@@ -32,13 +34,15 @@ body
 
 .loading-screen > .loader
 {
-    position: absolute;
-    bottom: 2rem;
-    font-size: clamp(4rem, 5vw, 6rem);
-    font-weight: 400;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: clamp(1.5rem, 6vw, 8rem);
+    font-weight: lighter;
     font-style: italic;
-    left: 95%;
-    transform: translateX(-95%);
 }
 
 .loading-text
