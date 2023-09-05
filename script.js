@@ -13,24 +13,6 @@ const heroBtns = document.querySelectorAll('.hero-btn');
         opacity: 0,
         ease: Power4.ease,
     })
-
-document.addEventListener('DOMContentLoaded', () => {
-    gsap.from(loadingText2, 1, {
-        y: '30%',
-        delay: 1,
-        ease: Power4.ease,
-        opacity: 0,
-    })
-})
-
-const delay = 1000;
-setTimeout(() => {
-    loader.addEventListener('click', () => {
-    gsap.to(loader, {
-        duration: .3,
-        opacity: 0,
-        display: "none",
-    })
     
     gsap.from(heroText, 1, {
         duration: 1.5,
@@ -43,14 +25,12 @@ setTimeout(() => {
         duration: 1.5,
         opacity: 0,
         y: '-20%',
-        delay: 1.5
+        delay: 1
     })
     gsap.from(heroBtns, {
         duration: 1.5,
         opacity: 0,
         y: '10%',
         stagger: 0.2,
-        delay: 1.5
+        delay: 1
     })
-})
-}, delay);
