@@ -15,22 +15,22 @@ const heroBtns = document.querySelectorAll('.hero-btn');
     })
     
     gsap.from(heroText, 1, {
-        duration: 1.5,
+        duration: 1,
         opacity: 0,
         y: '10%',
         stagger: 0.3
     })
 
     gsap.from(nav, {
-        duration: 1.5,
+        duration: 1,
         opacity: 0,
         y: '-20%',
-        delay: 1
+        delay: .5
     })
     gsap.from(heroBtns, {
-        duration: 1.5,
+        duration: 1,
         opacity: 0,
         y: '10%',
         stagger: 0.2,
-        delay: 1
+        delay: .5
     })
