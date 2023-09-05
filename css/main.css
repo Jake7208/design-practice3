@@ -24,8 +24,8 @@ body
     margin: 0 auto;
     max-width: 1920px;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
     color: var(--clr-text);
+    overflow-x: hidden;
 }
 
 
@@ -177,7 +177,6 @@ body
 {
     body
     {
-        overflow: hidden;
         overflow-x: hidden;
     }
     nav

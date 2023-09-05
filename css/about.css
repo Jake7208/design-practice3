@@ -1,0 +1,112 @@
+#about
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+}
+.about-title
+{
+    padding: 3rem 0; 
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about-subtitle
+{
+    font-size: clamp(.8rem, 3vw, 1rem);
+    background: var(--clr-primary);
+    color: var(--clr-bg);
+    padding: 0.2rem 1rem;
+}
+
+.about-title h1
+{
+    font-size: clamp(3rem, 6vw, 7rem); 
+    font-weight: 600;
+    width: 100%;
+    line-height: 130%;
+}
+
+.about-title h1 > span
+{
+    color: var(--clr-primary);
+    text-decoration: underline;
+}
+
+.about-content
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    width: 90%;
+    color: var(--clr-sub);
+    line-height: 250%;
+    margin: 0 auto;
+}
+
+.about-content article
+{
+    width: 80%;
+}
+
+.about-content button
+{
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    background-color: var(--clr-primary);
+    border: none;
+    color: var(--clr-bg);
+}
+
+.about-content button a
+{
+    text-decoration: none;
+    color: var(--clr-bg);
+}
+
+.about-content button:hover a
+{
+    color: var(--clr-primary);
+}
+
+.about-content button:hover
+{
+    background: none;
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.about-img
+{
+    height: 826px;
+    width: 80%;
+    max-height: 100vh;
+    flex-shrink: 0;
+    background: url(../img/team.png) no-repeat;
+    filter: grayscale(.9);;
+    background-size: cover;
+    background-position: center;
+    margin: -10rem auto;
+}
+
+
+
+@media screen and (max-width: 1330px){
+    .about-content
+    {
+        grid-template-columns: 1fr;
+    }
+    .about-content article
+    {
+        width: 100%;
+    }
+    .about-img
+    {
+        display: none;
+    }
+}
