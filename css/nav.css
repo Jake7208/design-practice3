@@ -13,6 +13,12 @@ nav
     align-items: center;
     justify-content: space-between;
 }
+
+nav a
+{
+    text-decoration: none;
+    color: var(--clr-bg);
+}
 nav ul,
 nav ul li,
 nav ul li a
