@@ -2,10 +2,17 @@ header
 {
     width: 100%;
     height: 75px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #34343449;
+    background-color: var(--clr-NavBg);
+    backdrop-filter: blur(10px) opacity(1) ;
 }
 
 nav
 {
+    max-width: 1920px;
     width: 90%;
     height: 75px;
     margin: 0 auto;
@@ -39,7 +46,7 @@ nav a
     position: relative;
 }
 
-nav a::after
+nav li a::after
 {
     content: '';
     position: absolute;
@@ -51,7 +58,7 @@ nav a::after
     transition: width 0.3s;
 }
 
-nav a:hover::after
+nav li a:hover::after
 {
     width: 100%;
 }

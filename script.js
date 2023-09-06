@@ -1,23 +1,13 @@
-const loader = document.querySelector('.loading-screen');
-const gradient = document.querySelectorAll('.background-gradient');
-const loadingText1 = document.querySelector('.loading-text h1');
-const loadingText2 = document.querySelector('.loading-text p');
+gsap.registerPlugin(ScrollTrigger);
 const nav = document.querySelector('nav');
 const heroText = document.querySelectorAll('.hero-text h1');
 const heroBtns = document.querySelectorAll('.hero-btn');
-    const videos = document.querySelector('.video');
+const videos = document.querySelector('.video');    
 
-
-    gsap.from(loadingText1, 1, {
-        y: '-20%',
-        opacity: 0,
-        ease: Power4.ease,
-    })
-    
     gsap.from(heroText, 1, {
         duration: 1,
         opacity: 0,
-        y: '10%',
+        y: '-10%',
         stagger: 0.3
     })
 
@@ -34,3 +24,20 @@ const heroBtns = document.querySelectorAll('.hero-btn');
         stagger: 0.2,
         delay: .5
     })
+
+    const mockup = document.getElementById('mockups');
+    // Pin the element initially
+
+
+
+    
+
+const lenis = new Lenis()
+
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
