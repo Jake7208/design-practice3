@@ -34,9 +34,8 @@ const videos = document.querySelector('.video');
         scrollTrigger: {
             trigger: mockup,
             start: 'center+=200 bottom',
-            end: testimonials,
+            end: testimonials + 'top',
             pin: true,
-            markers: true,
             scrub: 2
         }
     });
