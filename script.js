@@ -37,7 +37,7 @@ const videos = document.querySelector('.video');
             end: testimonials + 'top',
             pin: true,
             markers: true,
-            scrub: 2
+            scrub: 3
         }
     });
 
@@ -47,26 +47,28 @@ const videos = document.querySelector('.video');
             
         },
         {
+            delay: 2,
             translate: '-50% -50%',
-            duration: 3
+            duration: 20
         }
     )
     tl.fromTo(sticky, // specify the target element here
         {
-            delay: 1,
+            delay: 2,
             width: '35em',
             height: '35em',
             backgroundColor: 'black',
             zIndex: 5
         },
         {
+            delay: 1,
             width: '100%',
             height: '100vh',
             borderRadius: '0',
             left: '50%',
             backgroundColor: 'white',
             zIndex: 2,
-            duration: 3
+            duration: 20
         }
     );
     tl.fromTo(testimonials, {
