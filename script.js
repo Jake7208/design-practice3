@@ -40,24 +40,42 @@ const videos = document.querySelector('.video');
             scrub: 2
         }
     });
-    
+
+    tl.fromTo(sticky,
+        {
+            translate: '-50% 100%',
+            
+        },
+        {
+            translate: '-50% -50%',
+            duration: 3
+        }
+    )
     tl.fromTo(sticky, // specify the target element here
         {
+            delay: 1,
             width: '35em',
             height: '35em',
-            borderRadius: '35em',
             backgroundColor: 'black',
-            zIndex: -1
+            zIndex: 5
         },
         {
             width: '100%',
             height: '100vh',
             borderRadius: '0',
+            left: '50%',
             backgroundColor: 'white',
-            zIndex: 1,
+            zIndex: 2,
             duration: 3
         }
     );
+    tl.fromTo(testimonials, {
+        zIndex: -1,
+    },
+    {
+        zIndex: 1,
+        duration: 3
+    })
 
 const lenis = new Lenis()
 
