@@ -199,13 +199,15 @@ body
 
 #testimonials
 {
+    max-width: 1920px;
     position: relative;
     width: 70%;
     height: auto;
     margin: 0 auto;
+    margin-top: 100vh ;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: end;
+    justify-content: end;
     flex-direction: column;
     color: var(--clr-bg);
 }
@@ -213,10 +215,11 @@ body
 .testimonials-title
 {
     font-weight: 600;
+    margin-top: 20%;
     font-size: clamp(2rem, 5vw, 8rem);
     line-height: 150%;
     text-align: start;
-    justify-content: start;
+    justify-content: center;
 }
 .testimonials-container
 {
@@ -231,8 +234,8 @@ body
 
 .testimonial-card
 {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: calc(50vh - 75px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +251,10 @@ body
     {
         overflow: hidden;
     }
-
+    .hero-text h1
+    {
+        width: 100%;
+    }
     .hero-text p
     {
         width: 100%;

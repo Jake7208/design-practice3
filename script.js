@@ -27,17 +27,17 @@ const videos = document.querySelector('.video');
 
     let sticky = document.querySelector('.sticky-container');
     let mockup = document.querySelector('mockup-container');
-    const testimonials = document.querySelector('.testimonials');
+    const testimonials = document.getElementById('testimonials');
+    const body = document.getElementsByTagName('body');
 
     // sticky circle
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: mockup,
-            start: 'center+=200 bottom',
-            end: testimonials + 'top',
-            pin: true,
+            start: "center top",
+            end:  'bottom-=500 bottom',
             markers: true,
-            scrub: 3
+            scrub: 2
         }
     });
 
@@ -47,36 +47,40 @@ const videos = document.querySelector('.video');
             
         },
         {
-            delay: 2,
             translate: '-50% -50%',
-            duration: 20
+         
         }
     )
     tl.fromTo(sticky, // specify the target element here
         {
-            delay: 2,
-            width: '35em',
-            height: '35em',
+            width: '30em',
+            height: '30em',
             backgroundColor: 'black',
             zIndex: 5
         },
         {
-            delay: 1,
+    
             width: '100%',
             height: '100vh',
             borderRadius: '0',
             left: '50%',
             backgroundColor: 'white',
             zIndex: 2,
-            duration: 20
+            duration: 1
         }
     );
     tl.fromTo(testimonials, {
-        zIndex: -1,
+        opacity: 0,
     },
     {
-        zIndex: 1,
-        duration: 3
+        opacity: 1,
+    }, '<+=.5');
+
+    tl.fromTo(body, {
+        backgroundColor: 'black',
+    },
+    {
+        backgroundColor: 'white',
     })
 
 const lenis = new Lenis()
