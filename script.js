@@ -36,6 +36,7 @@ const videos = document.querySelector('.video');
             start: 'center+=200 bottom',
             end: testimonials + 'top',
             pin: true,
+            markers: true,
             scrub: 2
         }
     });
@@ -50,7 +51,7 @@ const videos = document.querySelector('.video');
         },
         {
             width: '100%',
-            height: '100%',
+            height: '100vh',
             borderRadius: '0',
             backgroundColor: 'white',
             zIndex: 1,
