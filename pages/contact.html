@@ -54,25 +54,26 @@
                 <input type="email" required>
                 <input type="text">
                 <input type="text" required>
-                <div class="budget-options">
-                    <label>
-                        <input type="radio" name="budget" class="budget" value="500+" required> $500+
-                    </label>
-                    <label>
-                        <input type="radio" name="budget" class="budget" value="1000+" required> $1000+
-                    </label>
-                    <label>
-                        <input type="radio" name="budget" class="budget" value="2000+" required> $2000+
-                    </label>
-                    <label>
-                        <input type="input" name="budget" class="budget" required> Custom
-                    </label>
-                </div>
-                <button type="submit">Submit</button>
+                <ul>
+                    <li tabindex="0">
+                        $500+
+                    </li>
+                    <li tabindex="0" >
+                        $1000+
+                    </li >
+                    <li tabindex="0">
+                        $2000+
+                    </li>
+                    <li tabindex="0">
+                        <input type="text" min="1" value="" placeholder="custom">
+                    </li>
+                </ul>
+                    <input type="hidden" name="budget" id="budget" value="">
+            <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>     <script src="../script.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="../pages.js"></script>
 </html>

@@ -85,46 +85,118 @@
 
 .form
 {
+    width: 90%;
+    margin: 0 auto;
     color: var(--clr-bg);
     background: var(--clr-contactBg);
-    border-radius: 40px 0 0 0;
-    height: 90%;
-    width: 50%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    border-radius: 40px 10px 0 0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
     display: flex;
-    align-items: start;
     justify-content: start;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 .form h2
 {
-    font-size: clamp(3rem, 4vw, 5rem);
+    font-size: clamp(3rem, 4vw, 4rem);
     font-weight: 700;
     margin-top: clamp(3rem, 10vw, 5rem);
     margin-bottom: clamp(1rem, 3vw, 2rem);
     line-height: 130%;
-    width: 80%;
-    height: 40%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 5rem auto;
 }
 
 form
 {
-    width: 80%;
+    max-width: 1920px;
+    width: 90%;
     margin: 0 auto;
     place-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: clamp(1.5rem, 3vw, 5rem);
 }
 
-.budget-options
+form ul li
 {
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid var(--clr-sub);
+    border-radius: 3px;
+    width: 100px;
+    font-size: clamp(1rem, 3vw, 1rem);
+    color: var(--clr-bg);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:0 5px;
+}
+form ul
+{
     grid-column: span 2;
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+form ul li input
+{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--clr-bg);
+    font-size: clamp(1rem, 3vw, 1rem);
+    display: flex;
+    align-items: center;
+}
+
+form ul li input::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--clr-bg);
+    opacity: 1;
+}
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:var(--clr-bg),
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: var(--clr-bg);
+  }
+
+  .activeBudget
+  {
+    border: var(--clr-text);
+  }
+
+
+@media screen and (max-width: 1330px)
+{
+    #contact
+    {
+        grid-template-columns: 1fr ;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+    form
+    {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .form
+    {
+        height: 100vh;
+    }
+    .form h2
+    {
+        width: 100%;
+    }
+
 }

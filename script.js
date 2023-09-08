@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-const nav = document.querySelector('nav');
 const heroText = document.querySelectorAll('.hero-text h1');
 const heroBtns = document.querySelectorAll('.hero-btn');
 const videos = document.querySelector('.video');    
@@ -9,13 +8,6 @@ const videos = document.querySelector('.video');
         opacity: 0,
         y: '-10%',
         stagger: 0.3
-    })
-
-    gsap.from(nav, {
-        duration: 1,
-        opacity: 0,
-        y: '-20%',
-        delay: .5
     })
     gsap.from(heroBtns, {
         duration: 1,
@@ -52,8 +44,6 @@ const videos = document.querySelector('.video');
     )
     tl.fromTo(sticky, // specify the target element here
         {
-            width: '30em',
-            height: '30em',
             backgroundColor: 'black',
             zIndex: 5
         },

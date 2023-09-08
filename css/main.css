@@ -51,7 +51,7 @@ body
 .hero-text h1 
 {
     width: 70%;
-    font-size: clamp(3rem, 6vw, 7rem);
+    font-size: clamp(2.5rem, 6vw, 7rem);
     font-weight: 500;
 }
 
@@ -75,7 +75,7 @@ body
 
 .hero-text p
 {
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(.8rem, 3vw, 1.3rem);
     width: 50%;
     color: var(--clr-sub);
     line-height: 150%;
@@ -172,7 +172,7 @@ body
     height: 100%;
     display: flex;
     margin: 0 auto;
-    align-items: start;
+    align-items: center;
     position: relative;
 }
 
@@ -189,6 +189,8 @@ body
 
 .sticky-container
 {
+    width: 30em;
+    height: 30em;
    position: absolute;
    top: 50%;
    left: 50%;
@@ -268,6 +270,12 @@ body
     {
         display: none;
     }
+    .sticky-container
+    {
+        width: 10em;
+        height: 10em;
+    }
+
 }
 
 @media screen and (max-width: 600px)
