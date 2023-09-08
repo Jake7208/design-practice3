@@ -1,0 +1,130 @@
+#contact
+{
+    display: grid;
+    max-height: calc(100vh - 80px);
+    height: 1080px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+}
+.subtitle
+{
+    background: var(--clr-primary);
+    color: var(--clr-bg);
+    padding: 0.2rem 1rem;
+    width: fit-content;
+}
+
+.title
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: clamp(3rem, 10vw, 5rem);
+}
+
+.title h1
+{
+    font-size: clamp(3rem, 6vw, 7rem);
+    font-weight: 600;
+    margin-bottom: 5rem;
+    line-height: 130%;
+}
+
+.title h3
+{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.title a,
+.title p
+{
+    position: relative;
+    width: fit-content;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    line-height: 220%;
+    color: var(--clr-sub);
+    text-decoration: none;
+}
+
+.title p:hover
+{
+    color: var(--clr-text);
+}
+
+.title a svg
+{
+    margin-left: .5rem;
+}
+
+.title a::after
+{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: var(--clr-text);
+    bottom: 0;
+    left: 0;
+    transition: width .3s;
+}
+
+.title a:hover::after
+{
+    width: 100%;
+}
+
+.title a:hover
+{
+    color: var(--clr-text);
+}
+
+.form
+{
+    color: var(--clr-bg);
+    background: var(--clr-contactBg);
+    border-radius: 40px 0 0 0;
+    height: 90%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.form h2
+{
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: 700;
+    margin-top: clamp(3rem, 10vw, 5rem);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    line-height: 130%;
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+}
+
+form
+{
+    width: 80%;
+    margin: 0 auto;
+    place-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.budget-options
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: span 2;
+}

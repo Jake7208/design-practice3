@@ -34,9 +34,8 @@ const videos = document.querySelector('.video');
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: mockup,
-            start: "center top",
-            end:  'bottom-=500 bottom',
-            markers: true,
+            start: "center-=1000 top",
+            end:  'bottom bottom',
             scrub: 2
         }
     });

@@ -8,6 +8,7 @@
     --clr-login: #0b0b0b;
     --clr-sub: #b5b5b5;
     --clr-NavBg: #0000005d;
+    --clr-contactBg: #607ecc;
 }
 
 *
@@ -30,7 +31,6 @@ body
 #hero
 {
 
-    height: 1080px;
     max-height: 100vh;
     width: 100%;
     margin: 0 auto;
