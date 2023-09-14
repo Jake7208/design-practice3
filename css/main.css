@@ -2,12 +2,12 @@
 
 :root
 {
-    --clr-bg: #000000;
-    --clr-text: #ffffff;
+    --clr-bg: #ffffff;
+    --clr-text: #1b1b1b;
     --clr-primary: #4F82EE;
     --clr-login: #0b0b0b;
-    --clr-sub: #b5b5b5;
-    --clr-NavBg: #0000005d;
+    --clr-sub: #7c7c7c;
+    --clr-NavBg: #ffffff91;
     --clr-contactBg: #607ecc;
 }
 
@@ -182,7 +182,7 @@ body
     display: flex;
     flex-direction: column;
     position: relative;
-    text-align: end;
+    text-align: center;
     font-size: clamp(2rem, 10vw, 8rem);
     font-weight: 600;
 }

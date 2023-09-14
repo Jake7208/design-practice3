@@ -44,7 +44,7 @@ const videos = document.querySelector('.video');
     )
     tl.fromTo(sticky, // specify the target element here
         {
-            backgroundColor: 'black',
+            backgroundColor: 'white',
             zIndex: 5
         },
         {
@@ -53,7 +53,7 @@ const videos = document.querySelector('.video');
             height: '100vh',
             borderRadius: '0',
             left: '50%',
-            backgroundColor: 'white',
+            backgroundColor: 'black',
             zIndex: 2,
             duration: 1
         }
@@ -66,10 +66,10 @@ const videos = document.querySelector('.video');
     }, '<+=.5');
 
     tl.fromTo(body, {
-        backgroundColor: 'black',
+        backgroundColor: 'white',
     },
     {
-        backgroundColor: 'white',
+        backgroundColor: 'black',
     })
 
 const lenis = new Lenis()
